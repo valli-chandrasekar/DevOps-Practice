@@ -1,0 +1,10 @@
+name: DevOps c1 pipeline
+on: [push]
+jobs:
+  build:
+    runs -on: ubuntu-latest
+  steps:
+    -name: checkout code
+     uses: actions/checkout@v2
+    -name: print message
+     run: echo "CI/CD pipeline running"
