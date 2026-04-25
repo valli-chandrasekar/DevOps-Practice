@@ -1,4 +1,4 @@
-name: DevOps c1 pipeline
+name: DevOps CI pipeline
 on: [push]
 jobs:
   build:
@@ -6,5 +6,5 @@ jobs:
   steps:
     -name: checkout code
      uses: actions/checkout@v2
-    -name: print message
-     run: echo "CI/CD pipeline running"
+    -name: build docker image
+     run:  docker build -t ci-demo-app
